@@ -1,5 +1,8 @@
+import { ShoppingCartProvider } from "./context";
 import Counter from "./Counter";
+import Panier from "./panier";
 import ShoppingList from "./ShoppingList";
+
 
 
 function App() {
@@ -8,7 +11,11 @@ function App() {
     <div className="App">
       <Counter />
       <br/>
-      <ShoppingList />
+      <ShoppingCartProvider>
+        <Panier />
+        <ShoppingList />
+      </ShoppingCartProvider>
+      
     </div>
   );
 }
